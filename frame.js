@@ -4,8 +4,12 @@ class Frame {
   }
 
   addRoll (roll) {
-    if (this.strike() === false) {
       this.rolls.push(roll);
+  }
+
+  secondRoll (roll) {
+    if (this.strike() === false) {
+      this.addRoll(roll);
     }
   }
   score () {
